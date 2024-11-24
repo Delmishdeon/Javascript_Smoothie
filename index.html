@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Machine</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>🥤 Build Your Perfect Smoothie! 🥤</h1>
+    </header>
+    
+    <main>
+        <!-- Smoothie Form Container -->
+        <form id="smoothieForm" class="form-container">
+            <!-- Name Input -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <!-- Smoothie Size Options -->
+            <fieldset>
+                <legend>🧃 Smoothie Size:</legend>
+                <label><input type="radio" name="size" value="Small" data-price="3" required> Small - $3</label>
+                <label><input type="radio" name="size" value="Medium" data-price="5"> Medium - $5</label>
+                <label><input type="radio" name="size" value="Large" data-price="7"> Large - $7</label>
+            </fieldset>
+
+            <!-- Ingredient Selection -->
+            <fieldset>
+                <legend>🍓 Ingredients ($1 each):</legend>
+                <label><input type="checkbox" name="ingredients" value="Strawberries" data-price="1"> Strawberries</label>
+                <label><input type="checkbox" name="ingredients" value="Bananas" data-price="1"> Bananas</label>
+                <label><input type="checkbox" name="ingredients" value="Mangoes" data-price="1"> Mangoes</label>
+                <label><input type="checkbox" name="ingredients" value="Blueberries" data-price="1"> Blueberries</label>
+                <label><input type="checkbox" name="ingredients" value="Spinach" data-price="1"> Spinach</label>
+            </fieldset>
+
+            <!-- Add-ons Dropdown -->
+            <label for="extras">✨ Add-ons ($2 each):</label>
+            <select id="extras" name="extras">
+                <option value="None" data-price="0">None</option>
+                <option value="Protein Powder" data-price="2">Protein Powder</option>
+                <option value="Almond Milk" data-price="2">Almond Milk</option>
+                <option value="Chia Seeds" data-price="2">Chia Seeds</option>
+            </select>
+
+            <!-- Special Instructions Text Area -->
+            <label for="comments">📝 Special Instructions:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Any special requests?"></textarea>
+
+            <!-- Order Button -->
+            <button type="submit" class="order-button">Place Order</button>
+        </form>
+
+        <!-- Output Section for Smoothie Details -->
+        <section id="output" class="output-container">
+            <!-- Smoothie Image Display -->
+            <div id="smoothieImage">
+                <img id="smoothieCup" src="images/4smoothies.jpg" alt="Smoothie Cup">
+            </div>
+            <!-- Details of the Smoothie Ordered -->
+            <div id="smoothieDetails"></div>
+            
+            <div id="smoothieBill"></div>
+            
+            <div id="smoothieFact"></div>
+        </section>
+    </main>
+
+    <!-- Link to external JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
